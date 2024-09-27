@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friedrich Bader - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'de'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+    <!-- Passwort-Eingabebereich -->
+    <div id="password-section">
+        <h2>Du möchtest auf meine persönliche Seite zugreifen</h2>
+        <h2>Bitte Passwort eingeben</h2><br>
+        <input type="password" id="password-input" placeholder="Passwort"><br>
+        <button id="submit-password">Bestätigen</button>
+        <p id="error-message" style="display: none; color: red;">Falsches Passwort. Bitte erneut versuchen.</p>
+    </div>
+
+    <!-- Kontaktformular -->
+    <div id="contact-section">
+        <h2>Kontaktiere mich, wenn Du kein Passwort hast</h2><br>
+        <form id="contact-form">
+            <input type="text" id="name-input" placeholder="Dein Name" required><br/><br/>
+            <input type="email" id="email-input" placeholder="Deine E-Mail" required><br/><br/>
+            <textarea id="message-input" placeholder="Deine Nachricht" rows="4" required></textarea><br/><br/>
+            <button type="submit" id="submit-contact">Nachricht senden</button>
+        </form>
+        <p id="contact-error-message" style="display: none; color: red;">Bitte füllen Sie alle Felder korrekt aus.</p>
+    </div>
+
+    
+    <!-- Geschützter Inhalt -->
+    <div id="protected-content" style="display: none;">
+    <!-- Header mit Navigationsleiste -->
+    <header style="display: flex; align-items: center;">
+        <img src="header.png" alt="Header Image" class="header-image" style="margin-right: 20px;">
+        <div>
+            <h1>Friedrich Bader</h1>
+            <p>Fachinformatiker Anwendungsentwicklung</p>
+            <!-- Google Translate Widget -->
+            <div id="google_translate_element"></div><br><hr><br>
+            <p>Wichtiger Hinweis!<br>
+            Die Seite ist noch nicht für alle Bildschirme optimiert!<br>
+            Am besten siehst du sie an deinem PC Monitor an.</p>
+        </div>
+
+        <!-- Navigationsleiste -->
+        <nav>
+            <ul>
+                <h2>NAVIGATION</h2>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#experience">Berufserfahrung</a></li>
+                <li><a href="#education">Bildung</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#lzk">Lernzielkontrollen</a></li>
+                <li><a href="#project">Projekte</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#impressum">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container für den Modus-Umschalter -->
+    <div style="text-align: center;">
+        <button id="toggleTheme">Switch to Light Mode</button>
+    </div>
+
+
+    <!--About me-->
+    <section id="about">
+        <img src="about_me.png" alt ="About Me" class="block-picture" id="about_me-picture">
+        <h2>Über mich</h2>
+        <img src="bewerbungsfoto.jpg" alt="Bewerbungsfoto von Friedrich Bader" class="profile-picture">
+        <p>Willkommen auf meiner Portfolio-Seite!</p><br><hr><br>
+        <p>Mein Name ist Friedrich, und ich freue mich, dass Du hier bist. Meine berufliche Reise ist geprägt von einer Leidenschaft für Technik und kontinuierlicher Weiterbildung.
+            Nach über 15 Jahren als Berufskraftfahrer habe ich mich entschieden, einen neuen Weg einzuschlagen und mache derzeit eine Umschulung zum Fachinformatiker Anwendungsentwicklung. Schon seit meiner Kindheit begeistert mich Technik und Elektronik, was mich dazu veranlasst hat, eine Ausbildung zum Kommunikationselektroniker abzuschließen. Nachdem ich nach Deutschland gezogen bin, habe ich meine Karriere in anderen Bereichen fortgesetzt, doch die Faszination für die IT-Welt hat mich immer begleitet.
+            Derzeit arbeite ich an den Grundlagen der Programmierung und Webentwicklung. Als Anfänger in Python und Java lerne ich, wie man mit diesen mächtigen Werkzeugen arbeitet, um innovative Lösungen zu schaffen. Meine Kenntnisse in HTML und CSS helfen mir, ansprechende Webseiten zu gestalten, während ich mich mit JavaScript in die Welt der dynamischen Webanwendungen vertiefe.
+        </p>
+        <p>Auf meiner Seite werde ich alles veröffentlichen, was mit meiner Umschulung zu tun hat – meine Projekte, Wünsche und Resultate. Und wenn Du hier gelandet bist, dann vielleicht über einen Link in meinem Lebenslauf. Hier kannst Du Dir einen Überblick über mich verschaffen, was ich mache oder bereits gemacht habe, sodass Du mich besser kennenlernen und entscheiden kannst, ob wir zusammenarbeiten könnten.
+            Auch im Bereich Microsoft Office und Office-Management mache ich Fortschritte, um die tägliche Büroarbeit effizienter zu gestalten. Meine Kenntnisse in Microsoft Teams und Zoom Webinars unterstützen mich dabei, effektive Kommunikation und Online-Veranstaltungen zu organisieren. Neben meiner Leidenschaft für IT interessiere ich mich auch für Projektmanagement und Scrum, wo ich die Grundlagen lerne, um Projekte erfolgreich zu steuern und agile Methoden anzuwenden.
+        </p>
+        <p>P.S.: Alle Bilder, die Du auf meiner Webseite siehst, sind mit Hilfe von FLUX1 bzw. mit Hilfe anderen KI Generatoren durch meine eigenen Prompts erstellt worden.</p>
+        <p>Vielen Dank, dass Du vorbeigeschaut hast! Ich freue mich über dein Feedback.</p>
+    </section>
+
+    <!--Berufserfahrung-->
+    <section id="experience">
+    <img src="experience.png" alt ="Experience Bild" class="block-picture" id="experience-picture">   
+        <h2 class="collapsible">Berufserfahrung</h2>
+        <div class="content">
+            <ul>
+                <li>
+                    <span>2011 - 2023 EMONS TRANSPORTE GMBH, KÖLN, Berufskraftfahrer</span>
+                    <div class="sub-container">
+                        <p>Da ich bei meinem vorherigen Arbeitgeber nahezu ausschließlich für die Firma Emons gefahren bin, wurde ich nach meiner Kündigung bei Cosar unmittelbar von Emons kontaktiert. Ich erhielt zeitnah eine Einladung zum Vorstellungsgespräch, bei dem mir direkt ein Arbeitsvertrag angeboten wurde. Im Juni begann ich meine Tätigkeit bei Emons.</p>
+                        <p>Zunächst begleitete ich einige Monate erfahrene Fahrer, um den Umgang mit dem Hängerzug zu erlernen, da ich zuvor hauptsächlich Erfahrung mit Sattelzügen hatte. Kurz darauf wurde mir ein fester 12-Tonner zugeteilt, mit dem ich im Schichtwechsel unterwegs war: tagsüber im Nahverkehr und nachts auf einer festen Tour nach Holland, bei der ich Autoteile für Mercedes-Autohäuser anlieferte. Später übernahm ich auch Lieferungen für einen Kunden in Belgien, wofür ich zusätzlich einen Anhänger transportieren musste.</p>
+                        <p>Im Laufe der Zeit fuhr ich 40-Tonner, Hängerzüge mit Wechselbrücken, Sattelzüge und Tandemzüge und sammelte dabei wertvolle Erfahrungen im Nahverkehr. Besonders gerne war ich auf den festen Nachttouren in verschiedene Regionen Deutschlands unterwegs.</p>
+                        <p>Obwohl ich insgesamt sehr zufrieden mit der Firma war, konnten wir uns letztlich bei den Gehaltsverhandlungen nicht einigen. Daher entschied ich mich, meine berufliche Laufbahn in eine andere Richtung zu lenken.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2010 2011 COSAR TRANSPORTE, KÖLN, Berufskraftfahrer</span>
+                    <div class="sub-container">
+                        <p>Die Firma Cosar war ein kleines Unternehmen, bei dem ich einen 12-Tonner im Nahverkehr fuhr. Cosar agierte als Subunternehmer für Emons und war für bestimmte Touren zuständig. Ich hatte eine feste Route mit Einsatzgebieten im Raum Grevenbroich, Rommerskirchen und Teilen von Mönchengladbach.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2009 - 2010 RANDSTAD, KÖLN, Produktionshelfer</span>
+                    <div class="sub-container">
+                        <p>Bei der Firma Randstad war ich als Produktionshelfer für Isover in Bergisch Gladbach tätig. Meine Hauptaufgabe bestand darin, die automatisierten Förderbänder zu überwachen, die fertige Waren verpackten. Die Arbeit erfolgte im Vier-Schicht-System.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2009 HTF, KERPEN, Berufskraftfahrer</span>
+                    <div class="sub-container">
+                        <p>Für die Firma HTF war ich als Berufskraftfahrer im Fernverkehr in ganz Deutschland unterwegs und fuhr dabei Tandemzüge und Sattelzüge.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2007 - 2008 TRANSHOFF, OBERGARTZEM, Berufskraftfahrer</span>
+                    <div class="sub-container">
+                        <p>Bei der Firma Transhoff begann ich nach meiner Umschulung ein Praktikum, nachdem ich ein vorheriges Praktikum abgebrochen hatte. In den ersten zwei Monaten fuhr ich als Beifahrer oder selbständig mit einem Sattelzug, allerdings immer in Begleitung eines anderen Fahrers, der zum selben Kunden unterwegs war. Nach dieser Einarbeitungszeit übernahm ich eigenständig Touren zu verschiedenen Kunden in ganz Frankreich, wobei wir hauptsächlich die Produktion von Procter & Gamble aus Euskirchen belieferten. Oft war ich eine Woche oder länger unterwegs.</p>
+                        <p>Obwohl die Arbeit an sich angenehm war, entschied ich mich, den Vertrag nicht zu verlängern, da das Verhältnis zu den Vorgesetzten für die Fahrermannschaft schwierig war.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2005 - 2007, ZORN FENSTER, BLANKENHEIM, Lackierer</span>
+                    <div class="sub-container">
+                        <p>Beim Familienbetrieb Zorn Fenster begann ich, um einen älteren Lackierer abzulösen, der kurz vor seiner Rente stand. Das Unternehmen stellte Fenster und Türen aus verschiedenen Holzsorten her, und meine Aufgabe war es, das Lackieren zu erlernen. Dabei arbeitete ich mit unterschiedlichen Farben und musste darauf achten, dass jede Holzart die passende Farbdicke erhielt. Schließlich wurde ich als Hauptlackierer tätig, bis die Firma aufgrund einer Insolvenz schließen musste.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2004 CENTRA ZEITARBEIT, KÖLN, Helfer</span>
+                    <div class="sub-container">
+                        <p>Bei der Firma Centra war ich als Produktionshelfer für die Firma Krüger in Bergisch Gladbach tätig.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2004 ADEVIS PERSONALDIENSTLEISTUNGEN, Mitarbeiter in der Verpackungsproduktion und im Lager</span>
+                    <div class="sub-container">
+                        <p>Für die Firma Adevis war ich als Mitarbeiter für verschiedene Kunden im Großraum Köln tätig.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--Bildung-->
+    <section id="education">
+        <img src="education.png" alt ="Education" class="block-picture" id="education-picture"> 
+        <h2 class="collapsible">Bildung</h2>
+        <div class="content">
+            <ul>
+                <li>
+                    <span>2024 - 2026 GFN, KÖLN, Fachinformatiker Anwendungsentwicklung</span>
+                    <div class="sub-container">
+                        <p>Im Januar 2024 habe ich endlich meine Umschulung zum Fachinformatiker für Anwendungsentwicklung begonnen. Nach mehr als einem halben Jahr intensiver Diskussionen und Prüfungen seitens des Arbeitsamtes erhielt ich schließlich grünes Licht für die Umschulung. Glücklicherweise hatte ich sehr nette und verständnisvolle Berater/innen beim Arbeitsamt. Am Ende erhielt ich mehrere persönliche Angebote von verschiedenen Bildungsträgern, darunter sowohl für App-Entwicklung als auch für Fachinformatik.</p>
+                        <p>Ich entschied mich für die GFN, da diese im Vergleich zu anderen Anbietern über eine modernere Ausstattung verfügt und zudem die Möglichkeit bietet, zwei Tage pro Woche remote von zu Hause aus zu lernen. In unserer Klasse herrscht eine sehr gemütliche und angenehme Atmosphäre, und die Gruppe ist angenehm klein.</p>
+                        <p>Ich bin insgesamt sehr zufrieden mit der Umschulung. Natürlich gibt es wie überall Raum für Verbesserungen, aber größtenteils bin ich sehr zufrieden. Ich hoffe, meine IHK-Prüfung erfolgreich abzuschließen.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2007 DEKRA, EUSKIRCHEN, Kraftfahrer mit ADR-Schein</span>
+                    <div class="sub-container">
+                        <p>Nachdem die Firma, bei der ich gearbeitet habe, insolvent ging und es in meinem Dorf kaum Möglichkeiten gab, eine neue Arbeitsstelle zu finden, stand ich vor der Entscheidung, meine berufliche Laufbahn zu ändern. Ich entschied mich für den Beruf des Berufskraftfahrers, da ich seit meiner Jugend davon geträumt hatte, Fahrer zu werden. Außerdem bereitete es mir viel Freude, mit einem eigenen PKW durch die Gegend zu fahren. Meine Begeisterung für das Fahren, die Möglichkeit einer kurzen Umschulung sowie die guten Jobchancen und relativ hohen Verdienstmöglichkeiten waren die entscheidenden Faktoren für meine Wahl.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2004 M.A.U.S., KÖLN, Lebensrettende Sofortmaßnahmen</span>
+                    <div class="sub-container">
+                        <p>Erwerb grundlegender Kenntnisse und Fähigkeiten in Erste Hilfe, Herz-Lungen-Wiederbelebung (CPR) und Notfallmanagement.</p>
+                        <p>Erlernen der Anwendung von Automatisierten Externen Defibrillatoren (AED).</p>
+                        <p>Training in der Wundversorgung, Umgang mit Schock und Bewusstlosigkeit, sowie der Behandlung von Knochenbrüchen und anderen Verletzungen.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2004 TERTIA, KÖLN, Word, Excel, PowerPoint, Multimedia und Internet, Schwerpunkt EDV</span>
+                    <div class="sub-container">
+                        <p>Microsoft Word: Fortgeschrittene Funktionen und Anwendungen, Dokumentenformatierung, Erstellung von Vorlagen und automatisierten Funktionen.</p>
+                        <p>Microsoft Excel: Erstellung und Verwaltung von Tabellenkalkulationen, Datenanalyse, Nutzung von Formeln und Funktionen, Pivot-Tabellen und Diagrammen.</p>
+                        <p>Microsoft PowerPoint: Entwicklung von Präsentationen, Nutzung von Folienlayouts, Animationen, Übergängen und Multimedia-Integration.</p>
+                        <p>Multimedia: Erstellung und Bearbeitung von Medieninhalten, Integration von Bildern, Videos und Audio in Präsentationen und Dokumente.</p>
+                        <p>Internet: Nutzung von Webanwendungen, Online-Recherche, sichere Internetnutzung und grundlegende Kenntnisse in Web-Technologien.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2004 TÜV-AKADEMIE, KÖLN, EDV</span>
+                    <div class="sub-container">
+                        <p>Microsoft Office Suite: Umfassende Schulung in Word, Excel und PowerPoint, einschließlich Dokumentenerstellung, Datenmanagement und Präsentationsgestaltung.</p>
+                        <p>Datenbanken: Einführung in grundlegende Datenbankkonzepte und -tools.</p>
+                        <p>Multimedia: Grundlagen der Multimedia-Anwendungen und -Integration in Dokumenten und Präsentationen.</p>
+                        <p>Internet: Nutzung von Internetdiensten, Web-Browsing-Techniken und Online-Recherche.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2003 SPRACHSCHULE, KÖLN, Sprach-Intensivkurs Deutsch für junge Aussiedler</span>
+                    <div class="sub-container">
+                        <p>Deutschkenntnisse: Intensives Sprachtraining zur Verbesserung der Deutschkenntnisse für junge Aussiedler.</p>
+                        <p>Grammatik und Syntax: Vertiefung der deutschen Grammatikregeln und Satzstruktur.</p>
+                        <p>Kommunikation: Praktische Übungen in alltäglicher und beruflicher Kommunikation.</p>
+                        <p>Kulturelle Integration: Unterstützung bei der Integration in die deutsche Gesellschaft und das Verständnis kultureller Unterschiede.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>1999 - 2002 BERUFSSCHULE, KARAGANDA, Kommunikationselektroniker</span>
+                    <div class="sub-container">
+                        <h4>Ausbildung zum Radio- und Fernsehmechaniker</h4>
+                        <p>Technische Grundlagen: Ausbildung in der Wartung, Reparatur und Installation von Radio- und Fernsehtechnik.</p>
+                        <p>Elektronik und Funktechnik: Vertiefte Kenntnisse in Elektronik, Signalverarbeitung und Funktechnik.</p>
+                        <p>Fehlerdiagnose: Praktische Fähigkeiten in der Fehlerdiagnose und -behebung von Kommunikationsgeräten.</p>
+                        <p>Reparatur und Wartung: Erlernen von Reparaturmethoden und regelmäßiger Wartung von Geräten.</p>
+                        <h4>Staatlich anerkannte Qualifikation</h4>
+                        <h5>Industrie- und Handelskammer (IHK), Deutschland</h5>
+                        <p>Kommunikationselektroniker, Fachrichtung Funktechnik: Anerkennung der Ausbildung als Kommunikationselektroniker mit Schwerpunkt Funktechnik in Deutschland.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>1993 - 1994 KOMBINAT, KARAGANDA, Grundlagen der Funk- und Fernsehmechanik</span>
+                    <div class="sub-container">
+                        <p>Einführung in die Funktechnik: Erlernen der Grundlagen der Funktechnologie und Signalübertragung.</p>
+                        <p>Fernsehtechnik: Grundlagen der Fernsehtechnik, einschließlich Aufbau und Funktionsweise von Fernsehern.</p>
+                        <p>Wartung und Reparatur: Praktische Übungen in der Wartung und Reparatur von Funk- und Fernsehtechnologie.</p>
+                        <p>Elektronische Schaltungen: Verständnis und Anwendung grundlegender elektronischer Schaltungen und Komponenten.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>1986 - 1994 MITTELSCHULE, KARAGANDA, Mittlere Reife/Realschulabschluss</span>
+                    <div class="sub-container">
+                        <h4>Mittelschule</h4>
+                        <p>Abschluss: Beendigung der 9. Klasse im Jahr 1994.</p>
+                        <p>Fächer: Allgemeine Schulbildung mit Schwerpunkt auf grundlegenden Fächern wie Mathematik, Naturwissenschaften, Literatur und Sprachen.</p>
+                        <h4>Gleichwertigkeit in Deutschland</h4>
+                        <h5>Industrie- und Handelskammer (IHK), Deutschland</h5>
+                        <p>Gleichstellung: Das Schulzeugnis wurde aufgrund der später absolvierten dreijährigen Ausbildung dem deutschen mittleren Schulabschluss (Realschulabschluss) gleichgestellt.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--Skills-->
+    <section id="skills">
+        <img src="skills.png" alt ="Skills" class="block-picture" id="skills-picture">
+        <h2 class="collapsible">Skills</h2>
+        <div class="content">
+            <ul>
+                <li>
+                    <span>Python</span>
+                    <div class="sub-container">
+                        <p>Als Python-Anfänger bringe ich Begeisterung und Lernbereitschaft in die Welt der Programmierung. Ich arbeite an den Grundlagen dieser vielseitigen Sprache und setze mein Wissen bereits in kleinen Projekten ein, um praktische Erfahrungen zu sammeln.
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Grundlagen der Programmierung: Verständnis der grundlegenden Syntax und Struktur von Python, einschließlich Variablen, Datentypen und Kontrollstrukturen.</p>
+                            <p>Einfache Skripterstellung: Erstellung grundlegender Skripte zur Automatisierung von Aufgaben und Datenverarbeitung.</p>
+                            <p>Datenbearbeitung: Erste Erfahrungen mit Bibliotheken wie Pandas zur Bearbeitung und Analyse von Daten.</p>
+                            <p>Fehlersuche und Debugging: Lernen, wie man Fehler im Code identifiziert und behebt, um die Funktionalität der Programme sicherzustellen.</p>
+                            <p>Ich bin motiviert, meine Python-Kenntnisse kontinuierlich zu erweitern und mich in Richtung fortgeschrittener Programmierung zu entwickeln. Python bietet mir eine solide Grundlage, um meine Fähigkeiten weiter auszubauen und komplexere Projekte zu realisieren.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Java - Erste Schritte in der objektorientierten Programmierung</span>
+                    <div class="sub-container">
+                        <p>Als Java-Anfänger arbeite ich daran, die Grundprinzipien und Konzepte der objektorientierten Programmierung zu erlernen. Ich beschäftige mich mit den Grundlagen der Java-Sprache und wende mein Wissen in einfachen Projekten an, um praktische Erfahrungen zu sammeln.
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Grundlagen der Java-Syntax: Verständnis der grundlegenden Syntax, Datentypen und Kontrollstrukturen von Java.</p>
+                            <p>Objektorientierte Programmierung (OOP): Erste Erfahrungen mit Klassen, Objekten, Vererbung und Polymorphismus.</p>
+                            <p>Entwicklung einfacher Anwendungen: Erstellung von grundlegenden Java-Anwendungen und -Programmen zur Festigung der Programmierkenntnisse.</p>
+                            <p>Fehlersuche und Debugging: Erlernen von Techniken zur Identifizierung und Behebung von Fehlern im Code.</p>
+                            <p>Ich bin engagiert, meine Java-Kenntnisse kontinuierlich zu erweitern und mich in der Softwareentwicklung weiterzuentwickeln. Java bietet mir eine starke Grundlage, um in komplexere Programmierprojekte einzutauchen und meine Fähigkeiten auszubauen.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Microsoft Office - Grundkenntnisse für effiziente Büroarbeit</span>
+                    <div class="sub-container">
+                        <p>Als Anfänger im Umgang mit Microsoft Office lerne ich die grundlegenden Funktionen der wichtigsten Office-Anwendungen kennen. Ich setze diese Fähigkeiten ein, um alltägliche Büroaufgaben effizient zu erledigen und meine Arbeitsabläufe zu optimieren.
+                            <p>Meine aktuellen Kenntnisse:</p>    
+                            <p>Word: Erstellung und Formatierung einfacher Dokumente, Nutzung grundlegender Funktionen wie Textverarbeitung und Layoutgestaltung.</p>
+                            <p>Excel: Grundlegende Nutzung von Tabellen, Durchführung einfacher Berechnungen, und Erstellung von Diagrammen zur Datenvisualisierung.</p>
+                            <p>PowerPoint: Erstellung von Präsentationen mit Text, Bildern und grundlegenden Animationen.</p>
+                            <p>Outlook: Verwaltung von E-Mails, Terminen und Kontakten zur effektiven Organisation des Arbeitsalltags.</p>
+                            <p>Ich arbeite kontinuierlich daran, meine Microsoft Office-Kenntnisse zu erweitern und komplexere Aufgaben zu bewältigen, um meine Effizienz und Produktivität zu steigern.  
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Scrum Foundation</span>
+                    <div class="sub-container">
+                        <p>Mit einer soliden Grundlage in Scrum kenne ich die wesentlichen Prinzipien und Praktiken dieses agilen Frameworks. Ich nutze Scrum, um die Effizienz von Projekten zu steigern und Teams dabei zu unterstützen, flexibel auf Veränderungen zu reagieren.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Agile Prinzipien: Verständnis der grundlegenden agilen Werte und Prinzipien, die Scrum zugrunde liegen.</p>
+                            <p>Scrum-Rollen: Kenntnisse der Rollen im Scrum (Scrum Master, Product Owner, Entwicklungsteam) und deren Verantwortlichkeiten.</p>
+                            <p>Scrum-Events: Teilnahme an und Durchführung von Scrum-Events wie Sprint Planning, Daily Stand-up, Sprint Review und Sprint Retrospective.</p>
+                            <p>Backlog-Management: Umgang mit Product Backlog und Sprint Backlog zur Priorisierung und Verwaltung von Aufgaben.</p>
+                            <p>Ich bin motiviert, mein Wissen in Scrum weiter auszubauen und agile Methoden effektiv in Projekten anzuwenden, um kontinuierliche Verbesserungen und hohe Teamleistung zu fördern.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Projektmanagement - Erste Schritte in der effektiven Projektsteuerung</span>
+                    <div class="sub-container">
+                        <p>Als Anfänger im Projektmanagement beginne ich, die Grundlagen der Projektplanung und -steuerung zu erlernen. Ich setze erste Techniken ein, um Projekte erfolgreich zu organisieren und umzusetzen.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Grundlagen der Projektplanung: Erstellung einfacher Projektpläne und Zeitpläne zur Organisation von Aufgaben und Meilensteinen.</p>
+                            <p>Teamarbeit: Unterstützung bei der Koordination von Projektteams und Kommunikation zur Sicherstellung eines reibungslosen Arbeitsablaufs.</p>
+                            <p>Ich bin motiviert, meine Projektmanagement-Kenntnisse kontinuierlich zu erweitern und mich in der professionellen Projektsteuerung weiterzuentwickeln.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Zoom Webinars - Erste Schritte in der Durchführung von Online-Veranstaltungen</span>
+                    <div class="sub-container">
+                        <p>Als Anfänger im Bereich Zoom Webinars lerne ich, wie man Online-Veranstaltungen effektiv plant und durchführt. Ich nutze die grundlegenden Funktionen von Zoom, um Webinare zu organisieren und eine positive Teilnehmererfahrung zu gewährleisten.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Webinar-Setup: Grundlegende Einrichtung und Konfiguration von Zoom-Webinaren, einschließlich der Planung und Einladung von Teilnehmern.</p>
+                            <p>Moderation: Durchführung einfacher Webinare, Nutzung grundlegender Funktionen wie Bildschirmfreigabe und Chat.</p>
+                            <p>Technische Grundlagen: Verständnis der grundlegenden technischen Anforderungen für ein reibungsloses Webinar, wie Audio- und Videoeinstellungen.</p>
+                            <p>Ich bin motiviert, meine Fähigkeiten in der Nutzung von Zoom Webinars kontinuierlich auszubauen und komplexere Funktionen zu erlernen, um professionelle Online-Veranstaltungen durchzuführen.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Microsoft Teams - Effiziente Zusammenarbeit und Kommunikation</span>
+                    <div class="sub-container">
+                        <p>Mit Kenntnissen in Microsoft Teams unterstütze ich die effektive Zusammenarbeit und Kommunikation innerhalb von Teams und Projekten. Ich nutze die Funktionen von Teams, um die Produktivität zu steigern und eine reibungslose Zusammenarbeit zu gewährleisten.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>  
+                            <p>Chats und Besprechungen: Nutzung von Chats und Video-Calls für die tägliche Kommunikation und Durchführung von virtuellen Meetings.</p>
+                            <p>Dateifreigabe und Zusammenarbeit: Teilen und gemeinsame Bearbeitung von Dateien direkt innerhalb von Teams zur Verbesserung der Zusammenarbeit.</p>
+                            <p>Ich bin engagiert, meine Fähigkeiten in Microsoft Teams weiter auszubauen, um die Zusammenarbeit und Kommunikation in Teams noch effizienter zu gestalten.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Office-Management - Erste Schritte in der Büroorganisation</span>
+                    <div class="sub-container">
+                        <p>Als Anfänger im Office-Management lerne ich die grundlegenden Aufgaben und Techniken zur effektiven Büroorganisation und -verwaltung. Ich arbeite daran, meine Fähigkeiten zu entwickeln, um einen reibungslosen Büroalltag zu unterstützen.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>  
+                            <p>Büroorganisation: Grundlegende Planung und Organisation von Büroabläufen, einschließlich Terminverwaltung und Dokumentenablage.</p>
+                            <p>Kommunikation: Unterstützung bei der Bearbeitung von Korrespondenz und der Koordination von Meetings.</p>
+                            <p>Datenverwaltung: Erste Erfahrungen in der Verwaltung und Pflege von Daten und Akten.</p>
+                            <p>Bürosoftware: Nutzung grundlegender Bürosoftware wie Microsoft Office zur Erstellung von Dokumenten und Tabellen.</p>
+                            <p>Ich bin motiviert, meine Office-Management-Kenntnisse kontinuierlich auszubauen, um die Effizienz und Organisation im Büro weiter zu verbessern.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>HTML/CSS - Grundlagen der Webentwicklung</span>
+                    <div class="sub-container">
+                        <p>Als Anfänger in HTML und CSS arbeite ich daran, die Grundlagen der Webentwicklung zu verstehen und anzuwenden. Ich lerne, wie man einfache, ansprechende Webseiten erstellt und gestaltet.</p>
+                            <p>Meine aktuellen Kenntnisse:</p> 
+                            <p>HTML: Erstellung von strukturierten Webseiten durch die Nutzung grundlegender HTML-Tags und -Elemente.</p>
+                            <p>CSS: Anwendung von CSS zur Gestaltung und Layout-Anpassung von Webseiten, einschließlich Farb- und Schriftartenwahl sowie Layout-Management.</p>
+                            <p>Responsive Design: Erste Erfahrungen im Erstellen von responsiven Webseiten, die sich an verschiedene Bildschirmgrößen und Geräte anpassen.</p>
+                            <p>Fehlerbehebung: Identifizierung und Behebung grundlegender Fehler in HTML- und CSS-Code zur Verbesserung der Webseitenfunktionalität.</p>
+                            <p>Ich bin engagiert, meine HTML- und CSS-Kenntnisse kontinuierlich zu erweitern, um komplexere und optisch ansprechendere Webseiten zu erstellen.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>JavaScript - Erste Schritte in der dynamischen Webentwicklung</span>
+                    <div class="sub-container">
+                        <p>Als Anfänger im Bereich JavaScript arbeite ich daran, die Grundlagen der Programmierung mit JavaScript zu erlernen und anzuwenden, um interaktive und dynamische Webanwendungen zu erstellen.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Grundlagen der Syntax: Verständnis der grundlegenden JavaScript-Syntax, einschließlich Variablen, Datentypen und Kontrollstrukturen.</p>
+                            <p>Funktionen und Events: Erstellung und Nutzung von Funktionen, sowie Handling von Benutzerinteraktionen und Events auf Webseiten.</p>
+                            <p>DOM-Manipulation: Erste Erfahrungen in der Manipulation des Document Object Model (DOM) zur dynamischen Änderung von Webseiteninhalten.</p>
+                            <p>Debugging: Grundlegende Fehlersuche und -behebung in JavaScript-Code, um die Funktionalität von Webanwendungen zu verbessern.</p>
+                            <p>Ich bin motiviert, meine JavaScript-Kenntnisse kontinuierlich zu erweitern und komplexere Funktionen und Anwendungen zu entwickeln, um interaktive und benutzerfreundliche Webseiten zu erstellen.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Fachliches Englisch - Kommunikation in beruflichen Kontexten</span>
+                    <div class="sub-container">
+                        <p>Mit grundlegenden Kenntnissen im fachlichen Englisch bin ich in der Lage, präzise und effektive Kommunikation in beruflichen und technischen Kontexten zu führen. Ich nutze mein Wissen, um Fachbegriffe korrekt anzuwenden und in englischer Sprache zu arbeiten.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Fachterminologie: Verständnis und Anwendung spezifischer Fachbegriffe und Jargon in meiner Branche.</p>
+                            <p>Berufliche Kommunikation: Erstellung und Interpretation von geschäftlichen Dokumenten, E-Mails und Berichten auf Englisch.</p>
+                            <p>Technische Dokumentation: Lesen und Verfassen von technischen Dokumentationen, Anleitungen und Handbüchern in englischer Sprache.</p>
+                            <p>Ich bin bestrebt, meine Kenntnisse im fachlichen Englisch weiter auszubauen, um meine Kommunikationsfähigkeiten in internationalen und beruflichen Kontexten zu verbessern.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Datenbanken/SQL - Grundlagen der Datenverwaltung und -abfrage</span>
+                    <div class="sub-container">
+                        <p>Als Anfänger im Bereich Datenbanken und SQL arbeite ich daran, die grundlegenden Konzepte der Datenbankverwaltung und -abfrage zu verstehen und anzuwenden. Ich nutze SQL, um Daten effizient zu verwalten und zu manipulieren.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Datenbankgrundlagen: Verständnis der grundlegenden Datenbankkonzepte wie Tabellen, Datensätze und Beziehungen.</p>
+                            <p>SQL-Abfragen: Erstellung und Ausführung grundlegender SQL-Abfragen zur Datenabfrage und -manipulation, einschließlich SELECT, INSERT, UPDATE und DELETE.</p>
+                            <p>Datenmodellierung: Erste Schritte in der Datenmodellierung zur Strukturierung von Daten in relationalen Datenbanken.</p>
+                            <p>Fehlersuche: Grundlegende Fehlersuche und -behebung in SQL-Abfragen, um korrekte Ergebnisse zu gewährleisten.</p>
+                            <p>Ich bin motiviert, meine Kenntnisse in Datenbanken und SQL kontinuierlich zu erweitern, um komplexere Datenbankaufgaben zu bewältigen und effektive Datenlösungen zu entwickeln.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span>Client-Systeme - Verwaltung und Unterstützung von Benutzerarbeitsplätzen</span>
+                    <div class="sub-container">
+                        <p>Mit grundlegenden Kenntnissen in Client-Systemen unterstütze ich die Verwaltung und Wartung von Benutzerarbeitsplätzen, um sicherzustellen, dass diese effizient und zuverlässig arbeiten.</p>
+                            <p>Meine aktuellen Kenntnisse:</p>
+                            <p>Systemkonfiguration: Einrichtung und Konfiguration von Betriebssystemen und Anwendungen auf Client-Geräten.</p>
+                            <p>Fehlerbehebung: Unterstützung bei der Diagnose und Behebung von Problemen auf Client-Systemen, einschließlich Hardware- und Softwarefehlern.</p>
+                            <p>Benutzerverwaltung: Verwaltung von Benutzerkonten und Berechtigungen zur Sicherstellung eines reibungslosen Zugriffs auf benötigte Ressourcen.</p>
+                            <p>Sicherheitsmaßnahmen: Implementierung grundlegender Sicherheitsmaßnahmen wie Updates, Patches und Antiviren-Software zum Schutz der Client-Systeme.</p>
+                            <p>Ich arbeite daran, meine Kenntnisse in der Verwaltung und Unterstützung von Client-Systemen weiter zu vertiefen, um eine optimale Systemleistung und -sicherheit zu gewährleisten.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--Lernzielkontrollen-->
+    <section id="lzk">
+        <img src="lzk.png" alt ="LZK" class="block-picture" id="lzk-picture">
+        <h2 class="collapsible">Lernzielkontrollen</h2>
+        <div class="content">
+            <ul>
+                <li>
+                    <span><h4 id="average-score">Durchschnittsbewertung aller Lernzielkontrollen (wird ständig aktualisiert) - 86,17 %</h4></span>
+                    <div class="sub-container">
+                        <p>Auf dieser Seite wird der Durchschnittswert aller Lernzielkontrollen automatisch berechnet und angezeigt.</p>
+                        <p>Durch diese automatische Aktualisierung wird der Durchschnittswert immer aktuell angezeigt, auch wenn neue Lernzielkontrollen hinzugefügt oder bestehende Bewertungen geändert werden. Dies ermöglicht eine präzise und zeitnahe Übersicht über meine Leistungen.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF01V2 Das Unternehmen und die eigene Rolle im Betrieb  
+                    <p class="score">Gut (89,63 %)</p></span>
+                    <div class="sub-container">
+                        <p>IT-Ausbildungsberufe und Beteiligte im dualen System</p>
+                        <p>Die eigene Rolle im Betrieb</p>
+                        <p>Arbeitsrechtliche Mitbestimmung im Betrieb</p>
+                        <p>Berufs- und Lebensplanung, das Modellunternehmen</p>
+                        <p>Betrieb und Unternehmen im Umfeld</p>
+                        <p>Zusammenarbeit mit Behörden und Organisationen</p>
+                        <p>Wirtschaftskreislauf</p>
+                        <p>Marktsituationen beschreiben</p>
+                        <p>Den Ausbildungsbetrieb präsentieren</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF02V2 Arbeitsplatz nach Kundenwunsch ausstatten 
+                    <p class="score">Gut (85,00 %)</p></span>
+                    <div class="sub-container">
+                        <p>Grundfunktionen des Computers</p>
+                        <p>Marktgängige IT-Systeme vorstellen</p>
+                        <p>Auswahlkriterien zu IT-Produkten allgemein unterscheiden</p>
+                        <p>Umweltschutz und Green-IT als wichtige IT-Ziele darstellen</p>
+                        <p>IT-Sicherheit von IT-Systemen, Informations- und Datenschutz erläutern</p>
+                        <p>Komponenten eines Arbeitsplatzcomputers unterscheiden</p>
+                        <p>Netzteile beschreiben und unterscheiden</p>
+                        <p>Datenträger beschreiben und unterscheiden</p>
+                        <p>Peripheriegeräte erläutern und unterscheiden</p>
+                        <p>Angebotsvergleiche und Nutzwertanalyse durchführen</p>
+                        <p>Finanzierungsangebote einholen und vergleichen</p>
+                        <p>Den Bestellprozess erläutern</p>
+                        <p>Angebotserstellung für den Kunden</p>
+                        <p>Vertragsabschluss durchführen</p>
+                        <p>Systeme zusammenstellen und liefern</p>
+                        <p>Hardware und Betriebssysteme installieren, konfigurieren und anpassen</p>
+                        <p>IT-Systeme, Geräte und Betriebsmittel übergeben und adressatengerecht erläutern</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF03 Clients in Netzwerk einbinden 
+                    <p class="score">Gut (89,71 %)</p></span>
+                    <div class="sub-container">
+                        <p>Hauptbestandteile von Computernetzen unterscheiden</p>
+                        <p>Eine Einführung in das Netzwerk des Ausbildungsbetriebs geben</p>
+                        <p>Grundlagen eines Computernetzwerkes erklären</p>
+                        <p>Selbstständig die Integration von Clients in ein Netzwerk planen und durchführen</p>
+                        <p>Netzwerk-Komponenten auswählen und konfigurieren</p>
+                        <p>Grundlagen der Daten- und Netzwerksicherheit beschreiben</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF09V2 Netzwerke und Dienste bereitstellen 
+                    <p class="score">Ausreichend (66,25 %)</p></span>
+                    <div class="sub-container">
+                        <p>Netzwerkkonfiguration</p>
+                        <p>IP-Adressierung</p>
+                        <p>Netzwerkdienste</p>
+                        <p>Netzwerksicherheit</p>
+                        <p>Troubleshooting</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF04V2 Schutzbedarfsanalyse im eigenen Arbeitsbereich durchführen 
+                    <p class="score">Gut (84,85 %)</p></span>
+                    <div class="sub-container">
+                        <p>Risikoanalyse</p>
+                        <p>Schutzbedarf ermitteln</p>
+                        <p>Sicherheitsanforderungen festlegen</p>
+                        <p>Datenschutz und Datensicherheit</p>
+                        <p>Maßnahmen umsetzen</p>
+                        <p>Überprüfung und Anpassung</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF05V2 Software zur Verwaltung von Daten anpassen 
+                    <p class="score">Befriedigend (73,33 %)</p></span>
+                    <div class="sub-container">
+                        <p>Datenbankgrundlagen</p>
+                        <p>Datenstrukturen anpassen</p>
+                        <p>Datenfilterung und -sortierung</p>
+                        <p>Benutzeroberfläche anpassen</p>
+                        <p>Berichtsfunktionen und Abfragen</p>
+                        <p>Schnittstellen und Datenexport</p>
+                        <p>Anpassung an betriebliche Anforderungen</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF07V2 Cyber-physische Systeme ergänzen 
+                    <p class="score">Sehr gut (95,98 %)</p></span>
+                    <div class="sub-container">
+                        <p>Grundlagen von cyber-physischen Systemen (CPS)</p>
+                        <p>Verbindung von physischen und digitalen Komponenten</p>
+                        <p>Kommunikation und Vernetzung</p>
+                        <p>Automatisierung und Steuerung</p>
+                        <p>Integration in betriebliche Prozesse</p>
+                        <p>Fehlerbehebung und Wartung</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF08V2 Daten systemübergreifend bereitstellen 
+                    <p class="score">Befriedigend (80,77 %)</p></span>
+                    <div class="sub-container">
+                        <p>Grundlagen der Datenbereitstellung</p>
+                        <p>Interoperabilität zwischen Systemen</p>
+                        <p>Datenformate und Standards</p>
+                        <p>Netzwerkbasierte Datenübertragung</p>
+                        <p>Sicherheitsaspekte bei der Datenübertragung</p>
+                        <p>Daten in Cloud-Umgebungen bereitstellen</p>
+                        <p>Fehlerbehebung und Monitoring</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF06V2 Serviceanfragen bearbeiten 
+                    <p class="score">Sehr gut (96,21 %)</p></span>
+                    <div class="sub-container">
+                        <p>Grundlagen des IT-Supports</p>
+                        <p>Erfassung und Priorisierung von Anfragen</p>
+                        <p>Problemlösungsstrategien</p>
+                        <p>Kommunikation mit Kunden oder Nutzern</p>
+                        <p>Dokumentation und Nachverfolgung</p>
+                        <p>Service-Level-Agreements (SLAs)</p>
+                        <p>Lösung von Standardproblemen</p>
+                        <p>Tools und Systeme zur Serviceanfragenbearbeitung</p>
+                        <p>Eskalation von Serviceanfragen</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF-ZQ3a Agile Scrum Foundation 
+                    <p class="score">Sehr gut (100,00 %)</p></span>
+                    <div class="sub-container">
+                        <p>Grundlagen der Agilität</p>
+                        <p>Scrum-Framework</p>
+                        <p>Scrum-Rollen und ihre Verantwortlichkeiten</p>
+                        <p>Sprints und Iterationen</p>
+                        <p>User Stories und Backlogs</p>
+                        <p>Daily Scrum (Daily Stand-up)</p>
+                        <p>Scrum-Events und deren Bedeutung</p>
+                        <p>Inkrementelles Arbeiten</p>
+                        <p>Verbesserung durch Retrospektiven</p>
+                        <p>Agiles Mindset</p>
+                    </div>
+                </li>
+                <li>
+                    <span>LF-VT1 Client Systeme Windows 10
+                    <p class="score">Sehr gut (95,00 %)</p></span>
+                    <div class="sub-container">
+                        <p>Installation von Windows</p>
+                        <p>Einführung in Windows</p>
+                        <p>Windows Editionen und Anforderungen</p>
+                        <p>Installationsmethoden</p>
+                        <p>Migrieren auf aktuelle Windowsversionen</p>
+                        <p>Nachinstallationsschritte und Personalisierung</p>
+                        <p>Konfigurieren und Anpassen des Start Menu</p>
+                        <p>Allgemeine Konfigurationsoptionen</p>
+                        <p>Erweiterte Konfigurationsmethoden</p>
+                        <p>Verwalten von Treibern und Peripherie</p>
+                        <p>Speicherkonfiguration</p>
+                        <p>Verwalten des lokalen Speichers</p>
+                        <p>Verwalten von Festplatten und Dateisystemen</p>
+                        <p>Verwalten von Speicherplätzen</p>
+                        <p>Konfigurieren des Netzwerks</p>
+                        <p>IP-Netzwerk Einstellungen</p>
+                        <p>Namensauflösung einrichten</p>
+                        <p>Drahtloszugang einrichten</p>
+                        <p>Konfiguration von Autorisierung und Authentifizierung</p>
+                        <p>Umgang mit Benutzern und Gruppen</p>
+                        <p>Konfiguration der Benutzerkontensteuerung</p>
+                        <p>Einrichtung von Windowsfreigaben</p>
+                        <p>Wartung von Windows 10</p>
+                        <p>Umgang mit dem Remote Desktop</p>
+                        <p>Fernwartung mit der PowerShell</p>
+                        <p>Überwachung und Fehlerbehebung bei der Computerleistung</p>
+                        <p>Anwenden von Updates für Windows und Anwendungen</p>
+                        <p>Fehlerbehebung</p>
+                        <p>Wiederherstellen von Dateien</p>
+                        <p>Wartung von Programmen</p>
+                        <p>Startprobleme beheben</p>
+                        <p>Beheben von Problemen in Betriebssystemdiensten</p>
+                        <p>Beheben von Treiberproblemen</p>
+                        <p>Erkennen von Hardwareproblemen unter Windows</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--Projekte-->
+    <section id="project">
+        <img src="project.png" alt ="Projekte" class="block-picture" id="project-picture">
+        <h2 class="collapsible">Projekte</h2>
+        <div class="content">
+            <ul>
+                <li>
+                    <span>Python Projekte</span>
+                    <div class="sub-container">
+                        <ul><li data-url="https://github.com/gothlivion/spyrograph">Spyrograph</li></ul>
+                        <ul><li data-url="https://github.com/gothlivion/C-sar-Chiffre-Entschl-ssler">Cäsar-Chiffre-Entschlüssler</li></ul>
+                        <ul><li data-url="https://github.com/gothlivion/mathquiz">Math Quiz</li></ul>
+                        <ul><li data-url="https://github.com/gothlivion/nettopreisrechner">Nettopreis Rechner</li></ul>
+                    </div>
+                </li>
+                <li>
+                    <span>HTML/CSS Projekte</span>
+                    <div class="sub-container">
+                        <ul><li data-url="https://github.com/gothlivion/calculator">Calculator</li></ul>
+                        <ul><li data-url="HERO/hero.html">GFN Projekt "Personas"</li></ul>
+                    </div>
+                </li>
+                <li>
+                    <span>Java Projekte</span>
+                    <div class="sub-container">
+                        <ul><li data-url="https://github.com/gothlivion/bankomat">Bankomat</li></ul>
+                    </div>
+                </li>
+                <li>
+                    <span>KI Projekte</span>
+                    <div class="sub-container">
+                        <ul><li data-url="https://www.etsy.com/shop/sweetdesignvalentina/?etsrc=sdt">Auftrag zu Logoerstellung für einen Online-Shop</li></ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--Download-->
+    <section id="download">
+        <img src="download.png" alt ="Download" class="block-picture" id="download-picture">
+        <h2 class="collapsible">Download</h2>
+        <div class="content">
+    
+            <!-- PDF zum Download -->
+            <ul>
+                <li class="pdf-item"></li>
+                    <a href="Englisch.pdf" download="Englisch">
+                        <p>Lade Teilnahmebestätigung Fachliches Englisch für IT-Berufe herunter</p>
+                        <img src="englisch.png" alt="Vorschau PDF 1" class="pdf-preview"> 
+                    </a>
+                </li>
+                <li class="pdf-item">
+                    <a href="EXIN_Certifikate.pdf" download="EXIN">
+                        <p>Lade EXIN Agile Scrum Foundation Certifikate herunter</p>
+                        <img src="EXIN_Certifikate.png" alt="Vorschau PDF 1" class="pdf-preview"> 
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <img src="contact.png" alt ="Contact" class="block-picture" id="contact-picture">
+        <h2 class="collapsible">Kontakt</h2>
+        <div class="content">
+            <ul>
+                <li>Telefon: +49 (0) 155 / 600 79 497</li>
+                <li>
+                    <div style="display: flex; justify-content: center;">
+                        <a href="tel:+4915560079497">Jetzt anrufen</a>
+                    </div>
+                </li>
+                <li>
+                    <div style="display: flex; justify-content: center;">
+                        <a href="mailto:gothlivion@gmail.com">E-Mail: gothlivion@gmail.com</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- impressum -->
+    <section id="impressum">
+        <img src="impressum.png" alt ="Impressum" class="block-picture" id="impressum-picture">
+        <h2 class="collapsible">Impressum</h2>
+        <div class="content">
+            <ul>
+                <li>
+                    <span>Angaben gemäß § 5 TMG</span>
+                    <div class="sub-container">
+                        <p>Friedrich Bader</p>
+                        <p>Köln</p>
+                        <p>Deutschland</p>
+                        <p>E-Mail: gothlivion@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <span>Haftungsausschuss:</span>
+                    <div class="sub-container">
+                        <h2>Haftung für Inhalte</h2>
+                        <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+                        <h2>Köln</h2>
+                        <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+                        <h2>Urheberrecht</h2>
+                        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Karte -->
+    <div class="map-beschreibung">
+        <h2><a href="https://www.gfn.de/" target="_blank">GFN Köln</a></h2>
+        <p>Subbelrather Str. 247-249, 50825 Köln</p>
+        <p>Hier findet meine Umschulung statt</p>
+    </div>
+    <div class="map-container" style="display: flex; justify-content: center; align-items: center; margin: 50px 0;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2513.361163959299!2d6.91659397522808!3d50.95402645097978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf2540745f8a3d%3A0xf30c08ed43ed07db!2sGFN!5e0!3m2!1sde!2sde!4v1727180149590!5m2!1sde!2sde"
+            width="800" 
+            height="400" 
+            style="border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 15px; box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), 0 0 40px rgba(0, 255, 204, 0.2);"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    
+
+    <!-- Scroll to Top Button -->
+    <div style="text-align: center; margin: 20px 0;">
+        <button onclick="scrollToTop()">Nach oben scrollen</button>
+    </div>
+    
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2024 Friedrich Bader</p>
+    </footer>
+
+    <!-- Partner-Links Container -->
+    <aside class="partner-container">
+        <h2>LINKS</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/friedrich-bader-0a9682308/" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.xing.com/profile/Friedrich_Bader6/web_profiles?expandNeffi=true" target="_blank">Xing</a></li>
+            <li><a href="https://friedrichbader.jimdofree.com/" target="_blank">Meine Jimdo Seite</a></li>
+            <li><a href="https://github.com/gothlivion" target="_blank">GitHub</a></li>
+            <li><a href="https://ra88it.de" target="_blank">Stephan Pfeifer</a></li>
+        </ul>
+    </aside>
+    </div>
+      
+
+    <script src="scripts.js"></script>
+</body>
+</html>

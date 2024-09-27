@@ -1,0 +1,581 @@
+/* Grundlegendes Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative; /* Für das Positionieren des Bildes */
+}
+
+/* Passwort-Seite Design */
+#password-section {
+    display: flex; /* Flexbox aktivieren */
+    flex-direction: column; /* Inhalte vertikal anordnen */
+    align-items: center; /* Horizontale Zentrierung */
+    justify-content: center; /* Vertikale Zentrierung der Kinder */
+    height: auto; /* Höhe des Containers auf volle Bildschirmhöhe setzen */
+    color: #fff; /* Textfarbe auf weiß setzen */
+    padding: 2rem; /* Abstand um den Inhalt hinzufügen */
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border die Gesamtbreite nicht überschreiten */
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.7); /* Leichter Schatten für besseren Textkontrast */
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2); /* Untere Grenze ähnlich wie im Header */
+    text-align: center; /* Text zentrieren */
+}
+
+/* Kontaktformular Design */
+#contact-section {
+    display: flex; /* Flexbox aktivieren */
+    flex-direction: column; /* Inhalte vertikal anordnen */
+    align-items: center; /* Horizontale Zentrierung der Kinder */
+    justify-content: center; /* Vertikale Zentrierung der Kinder */
+    height: auto; /* Höhe anpassen, eventuell auf 100vh setzen, wenn es auch voll sein soll */
+    color: #fff; /* Textfarbe auf weiß setzen */
+    padding: 2rem; /* Abstand um den Inhalt hinzufügen */
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border die Gesamtbreite nicht überschreiten */
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.7); /* Leichter Schatten für besseren Textkontrast */
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2); /* Untere Grenze ähnlich wie im Header */
+    text-align: center; /* Text zentrieren */
+}
+
+/* Optional: Titel und Absatz in der Passwort-Container */
+#password-section h2, #contact-section h2 {
+    font-size: 1.2rem; /* Schriftgröße für die Überschrift */
+    color: #00ffcc; /* Gleiche Farbe wie im Header */
+    text-shadow: 0 0 0.5rem #00ffcc, 0 0 20px #00ffcc; /* Gleicher Schatteneffekt wie im Header */
+}
+
+/* Formularfelder Styling */
+#contact-form input, #contact-form textarea {
+    width: 100%; /* Volle Breite nutzen */
+    max-width: 40rem; /* Maximalbreite setzen */
+    padding: 1rem; /* Innenabstand */
+    border: none; /* Keine Standardgrenze */
+    border-radius: 0.5rem; /* Abgerundete Ecken */
+    margin-bottom: 1rem; /* Abstand zwischen den Feldern */
+    background: rgba(255, 255, 255, 0.2); /* Leicht transparenter Hintergrund */
+    color: #fff; /* Textfarbe */
+    font-size: 1rem; /* Schriftgröße */
+}
+
+/* Button Styling */
+#submit-contact {
+    background-color: #e74c3c; /* Rote Farbe */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#submit-contact:hover {
+    background-color: #c0392b; /* Dunkler Rotton bei Hover */
+    transform: translateY(-0.2rem);
+}
+
+
+
+.protected.content {
+    width: 80%;
+    max-width: 80rem; /* Maximalbreite für große Bildschirme */
+    margin: 2rem auto; /* Zentriert den Container */
+    padding: 2rem; /* Innenabstand für den Inhalt */
+    background: rgba(0, 0, 0, 0.7); /* Dunkler transparenter Hintergrund */
+    border-radius: 1rem; /* Abgerundete Ecken */
+    box-shadow: 0 0 1.5rem rgba(0, 255, 204, 0.6); /* Leuchtender Schatten */
+    color: rgba(255, 255, 255, 0.9); /* Helle Schriftfarbe */
+    text-align: left; /* Text linksbündig */
+}
+
+/* Optional: Hover-Effekte für die geschützten Inhalte */
+.protected.content:hover {
+    background: rgba(0, 255, 204, 0.3); /* Hellerer Hintergrund beim Hover */
+    transition: background 0.3s ease; /* Sanfter Übergang */
+}
+
+
+.header-image { 
+    width: 20rem; /* Oder eine andere Größe, die du bevorzugst */
+    height: auto;
+    margin: 3rem; /* Abstand vom Rand, falls gewünscht */
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.6); /* Leuchtender Rand */
+    border: 0.2rem solid rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-image:hover {
+    transform: scale(1.1); /* Vergrößert das Bild beim Hover */
+    box-shadow: 0 0 2.5rem rgba(0, 255, 204, 0.8);
+}
+
+/* Header Design */
+header {
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 0.2rem solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #00ffcc;
+    text-shadow: 0 0 1rem #00ffcc, 0 0 0.2rem #00ffcc;
+}
+
+p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Styling for Google Translate Dropdown */
+#google_translate_element {
+    margin-top: 2rem;
+}
+
+.goog-te-combo {
+    background-color: #000;
+    color: #00ffcc;
+    border: 0.2rem solid #00ffcc;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    text-shadow: 0 0 0.5rem #00ffcc;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.goog-te-combo:hover {
+    background-color: #00ffcc;
+    color: #000;
+}
+
+/* Google Translate Bar ausblenden */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Entfernt das Padding, das die Leiste normalerweise erzeugt */
+body {
+    top: 0rem !important;
+}
+
+
+/* Navigation Styles */
+nav {
+    width: 11.2rem; /* Feste Breite für die Leiste auf der linken Seite */
+    height: 100vh; /* Volle Höhe, um die gesamte linke Seite zu bedecken */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-start; /* Elemente oben ausrichten */
+    align-items: center; /* Elemente in der Mitte vertikal ausrichten */
+    padding: 0.9rem;
+    position: fixed;
+    left: 0; /* An der linken Seite fixieren */
+    top: 0; /* Start bei der oberen Kante */
+    z-index: 1000;
+    box-shadow: 0 0 1.5rem rgba(0, 255, 204, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column; /* Vertikale Anordnung der Navigationselemente */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Vertikale Liste */
+    gap: 0.1rem;
+    margin-top: 0.6rem;
+}
+
+nav ul li {
+    font-size: 0.9rem;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    text-shadow: 0 0 1rem #00ffcc, 0 0 2rem #00ffcc;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 1.5rem #ff00ff, 0 0 3rem #ff00ff, 0 0 4rem #ff00ff;
+    transform: scale(1.1);
+}
+
+nav h2 {
+    top: 1rem;
+    text-align: center;
+    margin-top: 1.5rem; /* Entfernt den oberen Rand beim Titel */
+    color: #f93f17; /* Halbtransparente weiße Schrift */
+    text-shadow: 0 0 1rem #00ffcc, 0 0 2rem #00ffcc; /* Leuchtende Cyan-Umrandung */
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav {
+        width: 200px; /* Schmalere Breite für kleinere Bildschirme */
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+}
+
+
+/* Light Mode Styles */
+body.light-mode {
+    background: linear-gradient(135deg, #f0f0f0, #d9e2ec); /* Helle Farben */
+    color: #333; /* Dunkle Textfarbe */
+}
+
+/* Textfarbe für Light Mode */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode p,
+body.light-mode a,
+body.light-mode nav h2,
+body.light-mode nav ul li a,
+body.light-mode .partner-container h2,
+body.light-mode .partner-container ul li a {
+    color: black; /* Beispiel für eine dunklere Textfarbe */
+}
+
+/* Dark Mode Styles (optional, falls du noch keine hast) */
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Dunkle Farben */
+    color: #fff; /* Helle Textfarbe */
+}
+
+
+
+
+/* Bewerbungsfoto Styling */
+.profile-picture {
+    display: block;
+    margin: 3rem auto;
+    width: 11rem; /* Die Größe des Bildes anpassen */
+    height: 11rem;
+    border-radius: 50%; /* Rundes Bild */
+    box-shadow: 0 0 1.5rem rgba(0, 255, 204, 0.6); /* Leuchtender Rand */
+    border: 0.2rem solid rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.5); /* Vergrößert das Bild beim Hover */
+    box-shadow: 0 0 2.5rem rgba(0, 255, 204, 0.8);
+}
+
+
+/* Abschnitt Über mich */
+#about, #experience, #skills, #education, #lzk, #project, #download, #contact, #impressum {
+    width: 80%;
+    max-width: 56rem;
+    margin: 2rem auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem rgba(0, 255, 204, 0.6);
+    text-align: center; /* Text zentrieren */
+}
+
+/* Zusätzlich: sicherstellen, dass der Inhalt innerhalb des Abschnitts ebenfalls zentriert ist */
+#about p, #experience p, #skills p, #education p, #lzk p, #project p, #download p, #contact p, #impressum p {
+    text-align: center; /* Text innerhalb der Absätze zentrieren */
+}
+
+/* Experience Picture */
+.block-picture { 
+        width: 100%; /* Ändere diesen Wert, um die Größe des Bildes anzupassen */
+        max-width: 80rem; /* Optional: maximale Breite des Bildes */
+        height: auto; /* Stellt sicher, dass das Seitenverhältnis des Bildes erhalten bleibt */
+        max-height: 6rem; /* Optionale maximale Höhe des Bildes */
+        object-fit: cover; /* Stellt sicher, dass das Bild den Bereich abdeckt */
+        margin: 1rem auto; /* Abstand oben und unten, zentriert auf der Seite */
+        border: 0.2rem solid rgba(255, 255, 255, 0.2); /* Optional: fügt eine dünne Linie um das Bild hinzu */
+        box-shadow: 0 0 1.5rem rgba(0, 255, 204, 0.6);
+    }
+
+/* Experience List */
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+/* Styling für die Untercontainer */
+.sub-container {
+    display: none; /* Versteckt die zusätzlichen Informationen standardmäßig */
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.1rem rgba(0, 255, 204, 0.5);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+
+/* Styling für das sichtbare Sub-Container */
+.sub-container.open {
+    display: block; /* Zeigt die zusätzlichen Informationen an */
+    max-height: 100rem; /* Höhe kann angepasst werden */
+    padding: 1rem;
+}
+
+/* Hover-Effekte für die Listeneinträge */
+li {
+    cursor: pointer;
+    position: relative;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+}
+
+li:hover {
+    background: rgba(0, 255, 204, 0.3);
+}
+
+/* Grundstil für den zusammenklappbaren Bereich */
+.content {
+    display: none;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+/* Stil für die zusammenklappbaren Überschriften */
+.collapsible {
+    cursor: pointer;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0.1rem solid #ccc;
+    transition: background-color 0.3s ease; /* Für eine sanfte Übergangsanimation */
+}
+
+/* Hintergrundfarbe ändern, wenn der Container geöffnet ist */
+.collapsible.active {
+    background-color: rgba(0, 255, 204, 0.3); /* Neue Hintergrundfarbe, wenn der Container aktiv ist */
+}
+
+/* Stil für die Unterlisten */
+.sub-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sub-list li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Hover Effekt für Überschriften und Links */
+h1:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 1.5rem #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+p:hover {
+    color: #00ffcc;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effekt für die Abschnitte */
+#about:hover, #experience:hover, #skills:hover, #education:hover, #lzk:hover, #project:hover, #download:hover, #contact:hover, #impressum:hover {
+    background: rgba(0, 255, 204, 0.2);
+    box-shadow: 0 0 2.5rem rgba(0, 255, 204, 0.8);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effekt für Listenpunkte */
+li:hover {
+    color: #ff00ff;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Download Bereich */
+.pdf-item {
+    position: relative; /* Position muss gesetzt sein, damit z-index funktioniert */
+}
+
+.pdf-preview {
+    width: 4rem; /* Setze die Breite der Vorschau */
+    height: auto; /* Behalte das Seitenverhältnis des Bildes bei */
+    margin-left: 1.5rem; /* Abstand zum Text */
+    margin-right: 1.5rem; /* Abstand zum Text */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    vertical-align: middle; /* Bild und Text vertikal ausrichten */
+    transition: transform 0.3s ease; /* Sanfte Vergrößerung beim Hover */
+    transform-origin: center; /* Ursprung der Transformation in der Mitte */
+    z-index: 1; /* Z-Index für das Bild */
+}
+
+.pdf-preview:hover {
+    transform: scale(6); /* Vergrößere das Bild beim Hover */
+    z-index: 10; /* Bild über den Text bringen */
+    position: relative; /* Damit der z-index funktioniert */
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0; /* Abstand um die Liste herum */
+}
+
+.content li {
+    background-color: rgba(0, 0, 0, 0.05); /* Leichte Hintergrundfarbe für jeden Eintrag */
+    padding: 1rem;
+    border-radius: 0.8rem; /* Runde Ecken */
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1); /* Leichter Schatten für 3D-Effekt */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content li:hover {
+    background-color: rgba(0, 255, 204, 0.1); /* Hintergrundfarbe beim Hover ändern */
+    box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.15); /* Schatten vergrößern beim Hover */
+}
+
+.map-beschreibung a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.map-beschreibung {
+    display: flex;                 /* Flexbox aktivieren */
+    flex-direction: column;       /* Vertikale Anordnung */
+    justify-content: center;      /* Vertikal zentrieren */
+    align-items: center;          /* Horizontal zentrieren */
+    text-align: center;           /* Text zentrieren */
+    color: #00ffcc;               /* Farbe des Textes */
+    text-shadow: 0 0 1rem #00ffcc, 0 0 20px #00ffcc; /* Leuchtende Cyan-Umrandung */
+    margin-top: 2rem;             /* Abstand nach oben */
+}
+
+
+/* Hover Effekt für den Footer */
+footer:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 1rem #00ffcc;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Rechte Container */
+.partner-container {
+    width: 11.2rem; /* Feste Breite für die Leiste auf der linken Seite */
+    height: 100vh; /* Volle Höhe, um die gesamte linke Seite zu bedecken */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-start; /* Elemente oben ausrichten */
+    align-items: center; /* Elemente in der Mitte vertikal ausrichten */
+    padding: 0.9rem;
+    position: fixed;
+    right: 0; /* An der linken Seite fixieren */
+    top: 0; /* Start bei der oberen Kante */
+    z-index: 1000;
+    box-shadow: 0 0 1.5rem rgba(0, 255, 204, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column; /* Vertikale Anordnung der Navigationselemente */
+}
+
+.partner-container h2 {
+    top: 1rem;
+    text-align: center;
+    margin-top: 1.5rem; /* Entfernt den oberen Rand beim Titel */
+    color: #f93f17; /* Halbtransparente weiße Schrift */
+    text-shadow: 0 0 1rem #00ffcc, 0 0 2rem #00ffcc; /* Leuchtende Cyan-Umrandung */
+}
+
+.partner-container ul {
+    list-style-type: none; /* Entfernt Standardaufzählungszeichen */
+    padding: 0; /* Kein zusätzlicher Innenabstand */
+    text-align: center;
+}
+
+.partner-container ul li {
+    margin-bottom: 2rem; /* Abstand zwischen den Links */
+    font-size: 0.9rem;
+}
+
+.partner-container ul li a {
+    color: rgba(255, 255, 255, 0.7); /* Halbtransparente weiße Links */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    text-shadow: 0 0 1rem #00ffcc, 0 0 2rem #00ffcc; /* Glühender Cyan-Effekt */
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Übergangseffekte */
+}
+
+.partner-container ul li a:hover {
+    color: #ff00ff; /* Ändert die Farbe zu Magenta beim Hover */
+    text-shadow: 0 0 1.5rem #ff00ff, 0 0 3rem #ff00ff, 0 0 4rem #ff00ff; /* Glüheffekt in Magenta */
+    transform: scale(1.1); /* Vergrößerung beim Hover */
+}
+
+
+
+hr.separator {
+    width: 80%; /* Breite der Linie anpassen */
+    border: none; /* Entfernt die Standard-Grenze des hr-Elements */
+    border-top: 0.2rem solid #00ffcc; /* Linie hinzufügen und Farbe anpassen */
+    margin: 2rem 0; /* Abstand oben und unten zur Linie */
+    background-color: transparent; /* Hintergrund transparent halten */
+}
+
+button {
+    padding: 1rem 2rem;
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 0.5rem;
+    color: #000;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 1rem 0;
+}
+
+button:hover {
+    background-color: #ff00ff;
+}
+
+
+
+
+
+
+
